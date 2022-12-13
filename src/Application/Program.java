@@ -44,6 +44,11 @@ public class Program {
                 if (capturedPiece != null){
                     captured.add((capturedPiece));
                 }
+                if (chessMath.getPromoted() != null){
+                    System.out.print("Entre com a promoção da PECA (B/N/R/Q): ");
+                    String type = sc.nextLine();
+                    chessMath.replacePromotedPiece(type);
+                }
             }
             catch (ChessException e) {
                 System.out.println(e.getMessage());
